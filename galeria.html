@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Tudo sobre Bulldog Francês </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="galeria.css" rel="stylesheet" type="text/css" />
+
+    <script "javascript" src="javascript/funcoes.js"> </script>
+
+<div id="interface">
+
+  <header id="cabecalho">
+    <hgroup>
+      <h1>Bulldog Francês</h1>
+      <h2>Tudo para você se apaixonar por esta raça</h2>
+    </hgroup>
+
+    <img id="icone" src="Imagens/icone-galeria.heic" alt="Maquina Fotografica" width="110px" height="110px" />
+    <img id="logo" src="Imagens/logo_pagedog.PNG" alt="logo do site/blog" width="50px" />
+
+    <header class="redes-sociais">
+      <img id="youtube_logo" src="Imagens/logoyoutube.JPG" alt="logo do youtube" width="25px" />
+      <img id="instagram_logo" src="Imagens/logoinstagram.JPG" alt="logo do instagram" width="25px" />
+      <img id="twitter_logo" src="Imagens/logotwitter.JPG" alt="logo do twitter" width="25px" />
+    </header>
+
+    <nav id="menu">
+      <h1> Menu Principal </h1>
+      <ul type="disc">
+        <li onmouseover="mudaFoto('Imagens/icone-menu.heic')" width="160px" height="110px" onmouseout="mudaFoto('Imagens/icone-galeria.heic')"> <a href="index.html"> Home </a> </li>
+        <li> <a href="fotos.html"> Galeria </a> </li>
+        <li onmouseover="mudaFoto('Imagens/icone-saudeecuidado.heic')" width="200px" height="110px" onmouseout="mudaFoto('Imagens/icone-galeria.heic')"> <a href="cuidados.html"> Saúde&Cuidados </a> </li>
+        <li onmouseover="mudaFoto('Imagens/icone-faleconosco.heic')" width="200px" height="110px" onmouseout="mudaFoto('Imagens/icone-galeria.heic')"> <a href="fale-conosco.html"> Fale conosco </a> </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="full-corpo"> <!-- torna a página completa, sem aside -->
+    <article id="cabecalho-artigo">
+      <hgroup>
+        <h3> Google > Home > Galeria </h3>
+      </hgroup>
+    </article>
+
+  <article id="artigo-principal">
+    <h2 style="text-align: center"> Galeria </h2>
+    <p> Nesta página você encontra algumas obras divertidas, feitas por artista independêntes, encontrados na internet. Divirta-se! </p>
+    
+     <!-- cria uma galeria de fotos usando lista, sem o uso repetitivo do img. -->
+    <ul id="album-fotos"> <!-- criando uma lista não numerada -->
+      <li id="foto01"><span> French Bulldog With Mustache Art Print - by Etsy </span></li> <!-- span é uma tag sem função, mas serve para estilizar -->
+      <li id="foto02"><span> French Bulldog - by Carmen Saldana • Dogs collection: french bulldog </span></li>
+      <li id="foto03"><span> French Bulldog with Croissant Illustration - by Krissy Mast </span></li>
+      <li id="foto04"><span> Charlie the Frenchie dog illustration by blacklambstudio </span></li>
+      <li id="foto05"><span> French Bulldog Art Print - by Etsy </span></li>
+      <li id="foto06"><span> Artist not found </span></li>
+    </ul>
+
+  </article>
+  </section>
+
+  
+  <footer id="rodape">
+      <p> COPYRIGHT &copy; 2024 - by Eloá Guimarães <br>
+        <a href="http://instagram.com/tudosobrebulldpguefrances" target="blank"> Instagram </a> |
+        <a href="http://twitter.com/tudosobrebulldpguefrances" target="blank"> Twitter </a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    </body>
+</div>
+</html>
