@@ -1,0 +1,12 @@
+#btnEnviar {
+  display: inline-block;
+  background-color: black;
+  border: none;
+  color: white;
+  resize: 8px; /* tamanho do botão */
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 9pt;
+  border-radius: 10px;
+}
