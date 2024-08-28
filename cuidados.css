@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* configurando a imagem do aside lateral */
+aside#lateral img {
+  box-shadow: 1px 1px 4px black;
+  width: 300px;
+  height: 450px;
+}
+
+ 
