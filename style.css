@@ -1,0 +1,381 @@
+@charset "UTF-8";
+
+body {
+  background-image: url("");
+  background-color: white;
+  background-size: "";
+}
+
+div#interface {
+  width: 900px;
+  background-color: #ebebeb;
+  margin: -20px auto 0px auto;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+
+/* comentário: configurando o cabeçalho */
+header#cabecalho {
+  border-bottom: 1px #000000 solid;
+  background-image: url("Imagens/fundo_patinhas.JPG");
+  background-size: 450px;
+  background-repeat: repeat-x;
+  /* Repeat horizontally */
+  background-position: center;
+  width: 916px;
+  /* tamanho do cabeçalho */
+  height: 160px;
+  margin: -22px auto 0px auto;
+  margin-inline: -8px;
+  padding: 0px;
+}
+
+/* comentário: configurando imagem do icone, abaixo do menu */
+header#cabecalho img#icone {
+  position: absolute;
+  left: 860px;
+  /* posição na tela, distancia do lado direito */
+  top: 65px;
+  /* posição na tela, distancia do topo */
+}
+
+header#cabecalho img#logo {
+  position: absolute;
+  border: 1px #000000 solid;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+  top: 110px;
+  /* posição na tela, distancia do topo */
+  border-radius: 200%;
+  /*arredondando a imagem*/
+  margin-left: 10px;
+  /* espaçamento externo (aumenta distancia do lado esquerdo) */
+}
+
+header#cabecalho img#instagram_logo {
+  position: absolute;
+  border: 1px #000000 dashed;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+  left: 230px;
+  top: 110px;
+  /* posição na tela, distancia do topo */
+  border-radius: 100%;
+  /*arredondando a imagem*/
+}
+
+header#cabecalho img#youtube_logo {
+  position: absolute;
+  border: 1px #000000 dashed;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+  left: 180px;
+  top: 110px;
+  /* posição na tela, distancia do topo */
+  border-radius: 100%;
+  /*arredondando a imagem*/
+}
+
+header#cabecalho img#twitter_logo {
+  position: absolute;
+  border: 1px #000000 dashed;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+  left: 280px;
+  top: 110px;
+  /* posição na tela, distancia do topo */
+  border-radius: 100%;
+  /*arredondando a imagem*/
+}
+
+header#cabecalho h1 {
+  font-family: "Playwrite BE VLG", cursive;
+  font-size: 30pt;
+  font-weight: normal;
+  text-shadow: 1px rgba(0, 0, 0, 0.9);
+  padding-left: 40px;
+  /* espaçamento interno */
+  margin-bottom: -20px;
+  /* espaçamento externo (dimunui parte de abaixo) */
+}
+
+header#cabecalho h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15pt;
+  font-weight: normal;
+  letter-spacing: -1.5px;
+  /* espaçamento entre letras */
+  padding: 20px;
+  /* espaçamento interno */
+  padding-left: 50px;
+  margin-top: -20px;
+  /* espaçamento externo (dimunui parte de cima) */
+}
+
+/* comentário: criei uma class somente para os logos de redes sociais, para poder configurar elas juntas, ao mesmo tempo*/
+header.redes-sociais img {
+  position: absolute;
+  margin-left: 90px;
+}
+
+/* comentario: configurando link dentro do texto (Sobre a raça > Buldogue Françes)*/
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* comentário: configurando os paragrafos */
+p {
+  text-align: justify;
+  text-indent: 20px;
+}
+
+/* comentário: formatação de imagens com legendas.
+- Parâmetro Class -> sintaxe: nomedatag.nomedaclasse{}
+  exemplo: figure.foto-legenda {} */
+
+/* 1) no index/html, definir uma classe para a imagem -> ex:foto-legenda.
+sintaxe: <figure class="foto-legenda"> */
+
+/* 2) no CSS, chamar a classe com ID "foto-legenda" para fazer mudanças de estilo.
+sintaxe: figure.foto-legenda{} */
+
+figure.foto-legenda {
+  position: relative;
+  display: block;
+  float: right;
+  box-shadow: 1px 1px 4px black;
+  width: 210px;
+  height: 210px;
+}
+
+/* comentário: faz com que todas as imagens dentro desta class se tornem responsivas a dilatação da tela.*/
+figure.foto-legenda img {
+  width: 200px;
+  /* largura da imagem*/
+  height: 200px;
+  /* altura da imagem*/
+  border: 5px solid white;
+}
+
+/* comentário: edições da legenda*/
+figure.foto-legenda figcaption {
+  opacity: 0;
+  /* oculta a estilização da legenda, enquanto o cursor estiver longe*/
+  position: absolute;
+  /* determina a posição da legenda, o valor absolute indica que figcaption é um objeto filho/herdeiro do figure (o conteiner)*/
+  top: 0px;
+  /* indica a posição da legenda, dentro do conteiner */
+  background-color: rgba(0, 0, 0, .4);
+  /*camada transparente no fundo da legenda.*/
+  padding: 15px;
+  /* espaçamento da legenda dentro do container*/
+  color: white;
+  /*cor da legenda.*/
+  width: 100%;
+  /*dimensões da legenda*/
+  height: 100%;
+  box-sizing: border-box;
+  /* cria um box, dentro dos limites da imagem.*/
+  transition: opacity 1s;
+  /* tempo de transição da legenda. */
+}
+
+/* o comandos hover serve para que o estilo da legenda apareça somente quando o cursor passar na imagem, dispararando a classe/formatação especifica para que a legenda apareça diante a presença do cursor.*/
+figure.foto-legenda:hover figcaption {
+  opacity: 1;
+}
+
+
+
+
+/* comentário: formatação do menu flutuante */
+nav#menu {
+  display: block;
+  /* faz com que o menu seja exibido como um bloco, uma "div" */
+}
+
+nav#menu a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
+nav#menu ul {
+  list-style: none;
+  /* oculta as marcações da lista, type:disc */
+  text-transform: uppercase;
+  /* transforma o texto em maiusculo */
+  position: absolute;
+  /* posição absoluta possibilita o menu flutuar, sem sobreposição com o conteudo da página */
+  top: -20px;
+  /* posicão do menu, em relação ao topo da página*/
+  left: 510px;
+  /* posição do menu, em relação a esquerda da página */
+  font-family: system-ui;
+  /* fonte do menu */
+  font-size: 10pt;
+}
+
+nav#menu li {
+  display: inline-block;
+  /* alinha os itens do menu */
+  background-color: #c2c2c2;
+  /* cor do fundo do menu */
+  padding: 10px;
+  /* espaçamento entre os itens do menu */
+  margin: 2px;
+  /* espaçamento fora do menu */
+  transition: background-color 0.3s ease;
+  /* transição do efeito hover */
+}
+
+nav#menu li:hover {
+  background-color: #ebebeb;
+  /* cor do efeito hover */
+  transition: 1s ease;
+  transform: scale(1.2);
+  /* aumenta o tamanho do menu em 20% ao tocar*/
+}
+
+nav#menu h1 {
+  display: none;
+  /* oculta o título Menu Principal */
+}
+
+
+/* comentário: divisões da tela */
+
+section#corpo {
+  display: block;
+  /* faz com que a seção seja vista em bloco */
+  float: left;
+  width: 550px;
+  border-right: 1px solid black;
+  padding-right: 15px;
+}
+
+
+
+
+/* comentário: divisão para editar o cabecalho do artigo   */
+article#cabecalho-artigo h1 {
+  font-family: cursive;
+  font-size: 17pt;
+  font-weight: bold;
+  text-shadow: 1px rgba(0, 0, 0, .8);
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+article#cabecalho-artigo h2 {
+  font-size: 13pt;
+  font-weight: normal;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  /* criando a grade em volta */
+  border-top: 1px black dashed;
+  border-right: 1px black dashed;
+  border-left: 1px black dashed;
+  padding-left: 5px;
+  margin-right: 50%;
+}
+
+article#cabecalho-artigo h3 {
+  font-size: 10pt;
+  margin-bottom: 0px;
+}
+
+article#cabecalho-artigo h4 {
+  font-size: 10pt;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  /* criando a grade em volta */
+  border-bottom: 1px black dashed;
+  border-right: 1px black dashed;
+  border-left: 1px black dashed;
+  padding-left: 5px;
+  margin-right: 50%;
+}
+
+article#artigo-principal h3 {
+  font-size: 12pt;
+  color: black;
+  font-family: sans-serif;
+  margin-top: 10px;
+  text-align: center;
+}
+
+article#artigo-principal h2 {
+  font-size: 20pt;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+  margin-bottom: 20px;
+  background-color: lightgrey;
+  border-radius: 50px; 
+}
+
+aside#lateral {
+  display: block;
+  float: right;
+  width: 320px;
+}
+
+aside#lateral h2 {
+  font-size: 20pt;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+  margin-bottom: 5px;
+  background-color: lightgrey;
+  border-radius: 50px;
+}
+
+table#tabelacaracteristicas {
+  border: 1px solid #53350d;
+  border-spacing: 1px;
+  width: 320px;
+}
+
+table#tabelacaracteristicas td {
+  border: 1px solid #53350d;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+table#tabelacaracteristicas caption {
+  color: #000000;
+  font-size: 20pt;
+  text-align: center;
+  margin-bottom: 5px;
+  background-color: lightgrey;
+  border-radius: 50px;
+}
+
+table#tabelacaracteristicas td.colunae {
+  background-color: #000000;
+  vertical-align: center;
+  font-weight: bold;
+  color: white
+}
+
+table#tabelacaracteristicas td.colunad {}
+
+table#tabelacaracteristicas caption span {
+  display: block;
+  float: bottom;
+  text-align: center;
+  font-size: 8pt;
+}
+
+footer#rodape {
+  clear: both;
+  border-top: 1px solid black;
+}
+
+footer#rodape p {
+  text-align: center;
+}
