@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Tudo sobre Bulldog Francês </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="fale-conosco.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,500&display=swap');
+  </style>
+</head>
+
+  <script language="javascript" src="javascript/funcoes.js"> </script>
+  <script language="javascript" src="javascript/fale-conosco.js"> </script>
+
+<div id="interface">
+
+  <header id="cabecalho">
+    <hgroup>
+      <h1>Bulldog Francês</h1>
+      <h2>Tudo para você se apaixonar por esta raça</h2>
+    </hgroup>
+
+    <img id="icone" src="Imagens/icone-faleconosco.heic" alt="Bate - Papo" width="110px" height="110px" />
+    <img id="logo" src="Imagens/logo_pagedog.PNG" alt="logo do site/blog" width="50px" />
+
+    <header class="redes-sociais">
+      <img id="youtube_logo" src="Imagens/logoyoutube.JPG" alt="logo do youtube" width="25px" />
+      <img id="instagram_logo" src="Imagens/logoinstagram.JPG" alt="logo do instagram" width="25px" />
+      <img id="twitter_logo" src="Imagens/logotwitter.JPG" alt="logo do twitter" width="25px" />
+    </header>
+
+    <nav id="menu">
+      <h1> Menu Principal </h1>
+      <ul type="disc">
+        <li onmouseover="mudaFoto('Imagens/icone-menu.heic')" width="160px" height="110px" onmouseout="mudaFoto('Imagens/icone-faleconosco.heic')"> <a href="index.html"> Home </a> </li>
+        <li onmouseover="mudaFoto('Imagens/icone-galeria.heic')" width="160px" height="110px" onmouseout="mudaFoto('Imagens/icone-faleconosco.heic')"> <a href="fotos.html"> Galeria </a> </li>
+        <li onmouseover="mudaFoto('Imagens/icone-saudeecuidado.heic')" widh="200px" height="110px" onmouseout="mudaFoto('Imagens/icone-faleconosco.heic')"> <a href="cuidados.html"> Saúde&Cuidados </a> </li>
+        <li> <a href="fale-conosco.html"> Fale conosco </a> </li>
+      </ul>
+    </nav>
+    
+  </header>
+  <body>
+
+  <section id="corpo-full"> <!-- torna a página inteira, sem aside -->
+    <article id="cabecalho-artigo">
+      <hgroup>
+        <h3> Google > Home > Galeria > Cuidados > Fale conosco </h3>
+      </hgroup>
+    </article>
+
+  <article id="artigo-principal">
+    <h2 style="text-align: center"> Formulário de Contato </h2>
+
+
+    <!-- criação do formulário -->
+   <form method="post" id="fContato" action="mailto:eloguim@hotmail.com"> 
+     
+   <fieldset id="contatos"> <!-- comando para agrupar os campos do form, significa: conjunto de campos. --> 
+   <legend> Indetifique-se </legend>
+   <p> Nome: <input type="text" name="tNome" id="cNome" size="30" maxlength="40" placeholder="Nome Completo" aria-required="true"/> </p>
+   <p> E-mail: <input type="email" name="tEmail" id="cEmail" size="30" maxlength="30" placeholder="joaosantos@hotmail.com" aria-required="true"/> </p> 
+     
+   <fieldset id="phone">
+   <legend> Telefone </legend>
+   <p> Número de Telefone: <input type="tel" name="tPhone" id="cPhone" size="12" maxlength="12" aria-label="(xx) xxxxx-xxxx" placeholder="(xx) xxxxx-xxxx" aria-required="true"/> </p>
+      <p> <input type="checkbox" name="tWhatsapp" id="cWhatsapp"> este número também é Whatsapp </p> <label for="cWhatsapp"></label>
+  </fieldset>
+   </fieldset>
+
+   <fieldset id="dados-tutor"> <!-- todo fieldset deve ter um id, para melhor identificação e edição na hora de estilizar no css -->
+    <legend> Dados Pessoais </legend>
+     <p> Estado: 
+     <select name="tEst" id="cEst"> 
+      <optgroup label="Região Nordeste"> <!-- facilita a navegação do usuário, dividindo a lista em regiões -->
+        <option value="AL"> Alagoas </option> <!-- value manda um valor simplificado ao sistema, ao invés do nome todo. -->
+        <option value="BA" selected> Bahia </option> <!-- selected deixa o o valor (BA) fixado  na caixa de seleção -->
+        <option value="CE"> Ceará </option>
+        <option value="PE"> Pernambuco </option>
+        <option value="SE"> Sergipe </option>
+      </optgroup> 
+     </select>
+     </p>
+     
+     <p> Cidade: <input type="text" name="tCid" id="cCid" list=cidades> </p>
+     <datalist id="cidades"> 
+        <optgroup label="Cidades de Alagoas"> 
+          <option value="Maceió"> </option>
+          <option value="Arapiraca"> </option>
+          <option value="Rio Largo"> </option>
+        </optgroup>
+       
+        <optgroup label="Cidades da Bahia">
+          <option selected value="Salvador"> </option>
+          <option value="Camaçari"> </option>
+          <option value="Lauro de Freitas"> </option>
+        </optgroup>
+
+       <optgroup label="Cidades do Ceará">
+         <option value="Fortaleza"> </option>
+         <option value="Sobral"> </option>
+         <option value="Juazeiro do Norte"> </option>
+       </optgroup>
+
+       <optgroup label="Cidades da Sergipe">
+         <option value="Aracaju"> </option>
+         <option value="Itabaiana"> </option>
+         <option value="São Cristovão"> </option>
+       </optgroup>
+
+       <optgroup label="Cidades de Pernambuco">
+          <option value="Recife"> </option>
+          <option value="Petrolina"> </option>
+          <option value="Olinda"> </option>
+        </optgroup>
+       
+     </datalist>
+     </select>
+     
+     
+    <fieldset id="tratamento"> <!-- um novo grupo de campos, interno ao fielset anterior id= "dados-tutor" -->
+     <legend> Pronome de Tratamento: </legend>
+      <input type="radio" name="tTratamento" id="cMas"/>    <label for="cMas"> Senhor </label> <br>
+      <input type="radio" name="tTratamento" id="cFem"/>    <label for="cFem"> Senhora </label> <br>
+      <input type="radio" name="tTratamento" id="cNaoBin"/> <tabel for="cNaoBin"> Senhore </tabel>
+    </fieldset> 
+   </fieldset>
+
+  <fieldset id="dados-cachorro">
+    <legend> Dados do Bulldog </legend>
+    
+  <p> <input type="checkbox" name="tInfo" id="cInfo"> Gostaria de informações personalizadas sobre o meu doguinho!</p>
+    
+    <fieldset id="pelagem"> 
+      <legend> Pelagem </legend>
+      <input type="radio" name="tPelagem" id="cBranco"/>  <label for="cBranco"> Branco </label> <br>
+      <input type="radio" name="tPelagem" id="cFulvo"/>   <label for="cFulvo"> Fulvo (caramelo) </label> <br>
+      <input type="radio" name="tPelagem" id="cPreto"/>   <label for="cPreto"> Preto </label> <br>
+      <input type="radio" name="tPelagem" id="cTigrado"/> <label for="cTigrado"> Tigrado </label> 
+    </fieldset>
+    
+   <fieldset id="sexo"> 
+     <legend> Sexo </legend>
+     <input type="radio" name="tSexo" id="cMacho"/> <label for="cMacho"> Macho </label> <br>
+     <input type="radio" name="tSexo" id="cFemea"/> <label for="cFemea"> Fêmea </label>
+    </fieldset>
+
+     <p> Idade: <input type="number" name="tIdade" id="cIdade" size="3" maxlength="2" value="1"/> </p>
+     <option> </option>
+     <option> </option>
+     <option> </option>
+</fieldset>
+    
+   <fieldset id="mensagem">
+  <legend> Descreva aqui sua dúvida: </legend>
+     <textarea name="tMensagem" id="cMensagem" cols="50" rows="10"> </textarea>
+   </fieldset>
+
+  <br> 
+
+       <button type="submit" id="btnEnviar"> Enviar </button>
+  
+  </form>
+
+    </article>
+      </section>
+
+  <footer id="rodape">
+      <p> COPYRIGHT &copy; 2024 - by Eloá Guimarães <br>
+        <a href="http://instagram.com/tudosobrebulldpguefrances" target="blank"> Instagram </a> |
+        <a href="http://twitter.com/tudosobrebulldpguefrances" target="blank"> Twitter </a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    </body>
+</div>
+</html>
